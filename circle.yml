@@ -13,7 +13,7 @@ workflows:
       - cypress/run:
           # install Ruby dependencies
           build: bundle install
-          start: rails server
+          start: ls && rails server
           wait-on: 'http://localhost:3000'
           executor: with-ruby
           no-workspace: true
