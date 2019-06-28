@@ -1,0 +1,18 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+executors:
+  with-ruby:
+    docker:
+      - image: 'ruby:2.3.7-node-browsers'
+workflows:
+  build:
+    jobs:
+      - cypress/run:
+          pre-steps:
+            # install Ruby dependencies
+            - run: bundle install
+          start: rails server
+          wait-on: 'http://localhost:3000'
+          no-workspace: true
+          executor: with-ruby
