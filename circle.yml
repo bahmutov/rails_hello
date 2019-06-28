@@ -12,9 +12,8 @@ workflows:
     jobs:
       - cypress/install:
           executor: with-ruby
-          post-steps:
-            # install Ruby dependencies
-            - run: bundle install
+          # install Ruby dependencies
+          build: bundle install
 
       - cypress/run:
           requires:
