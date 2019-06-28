@@ -1,0 +1,26 @@
+{
+  "name": "rails_hello",
+  "version": "1.0.0",
+  "description": "This is a simple Rails application that we build into a Docker image. See [cage](http://cage.faraday.io/) for more details.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/rails_hello.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faradayio/bahmutov/issues"
+  },
+  "homepage": "https://github.com/faradayio/bahmutov#readme",
+  "devDependencies": {
+    "cypress": "3.3.2"
+  }
+}
