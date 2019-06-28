@@ -10,14 +10,10 @@ executors:
 workflows:
   build:
     jobs:
-      - cypress/install:
-          executor: with-ruby
+      - cypress/run:
           # install Ruby dependencies
           build: bundle install
-
-      - cypress/run:
-          requires:
-            - cypress/install
           start: rails server
           wait-on: 'http://localhost:3000'
           executor: with-ruby
+          no-workspace: true
